@@ -1,0 +1,22 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: $mobile-size) {
+    flex-direction: column;
+  }
+
+  &__txt {
+    color: #B5B7C0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    padding: 0 2px;
+
+    @media (max-width: $mobile-size) {
+      margin-bottom: 10px;
+      text-align: center;
+    }
+  }
+}

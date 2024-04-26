@@ -1,0 +1,76 @@
+.main-block {
+  @include container;
+  padding-top: 41px;
+  padding-bottom: 41px;
+  grid-area: main-table;
+
+  @media (max-width: $mobile-size) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  &__slogan {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 51px;
+
+
+    @media (max-width: $mobile-size) {
+      margin-bottom: 21px;
+    }
+  }
+
+  &__heading {
+    display: grid;
+    grid-template-areas: 'sub-title search' 'members-status search';
+    row-gap: 7px;
+    margin-bottom: 26px;
+
+    @media (max-width: $mobile-size) {
+      grid-template-areas: 'sub-title' 'members-status' 'search';
+      margin-bottom: 8px;
+    }
+  }
+
+  &__sub-title {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 33px;
+    letter-spacing: -0.01em;
+    grid-area: sub-title;
+  }
+
+  &__members-status {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: -0.01em;
+    color: #16C098;
+    grid-area: members-status;
+  }
+
+  &__search {
+    margin-left: auto;
+    margin-top: 14px;
+    margin-right: 14px;
+    grid-area: search;
+
+    @media (max-width: $mobile-size) {
+      margin: 0;
+    }
+  }
+
+  &__wrapper {
+    background-color: #ffffff;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 25);
+    border-radius: 30px;
+    padding: 30px 40px 40px 38px;
+    @media (max-width: $mobile-size) {
+      padding: 0;
+      background-color: transparent;
+      box-shadow: none;
+    }
+  }
+}
+

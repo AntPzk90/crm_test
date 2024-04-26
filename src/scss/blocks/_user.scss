@@ -1,0 +1,57 @@
+.user {
+  &--hide {
+    width: 58px;
+    margin-left: auto;
+
+    & .user__text {
+      display: none;
+    }
+
+    & .user__avatar {
+      width: 58px;
+      height: 58px;
+    }
+  }
+
+  &__link {
+    display: flex;
+
+    &:hover {
+      & .user__avatar {
+        transform: scale(1.1);
+      }
+
+      & .user__position {
+        color: var(--active-color);
+      }
+    }
+  }
+
+  &__avatar {
+    display: block;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    margin-right: 12px;
+    transition: all ease .3s;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #000000;
+  }
+
+  &__position {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #757575;
+  }
+}

@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard CRM</title>
+  <link rel="stylesheet" href="./img/sprite/symbol/sprite.svg">
+  <link rel="stylesheet" href="./css/main.css"/>
+</head>
+<body class="body">
+<main class="content">
+  <header class="side-bar">
+  <div class="side-bar__row">
+    <a href="/" class="side-bar__logo">
+      <svg class="side-bar__icon">
+        <use xlink:href="./img/sprite/symbol/sprite.svg#dashboard-logo" class="side-bar__use"></use>
+      </svg>
+    </a>
+    <span class="side-bar__version">v.01</span>
+    <button class="side-bar__btn nav-btn">
+      <span class="nav-btn__icon"></span>
+    </button>
+  </div>
+  
+  <nav class="side-bar__navigation navigation">
+    <ul class="navigation__list">
+      <li class="navigation__item">
+        <a href="#" class="navigation__link">
+          <svg class="navigation__icon">
+            <use xlink:href="./img/sprite/symbol/sprite.svg#key-icon" class="navigation__use"></use>
+          </svg>
+          <span class="navigation__txt">Dashboard</span>
+          <svg class="navigation__chevron">
+            <use xlink:href="./img/sprite/symbol/sprite.svg#chevron-navigation-icon" class="navigation__use"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="navigation__item">
+        <a href="#" class="navigation__link">
+          <svg class="navigation__icon">
+            <use xlink:href="./img/sprite/symbol/sprite.svg#product-icon" class="navigation__use"></use>
+          </svg>
+          <span class="navigation__txt">Product</span>
+          <svg class="navigation__chevron">
+            <use xlink:href="./img/sprite/symbol/sprite.svg#chevron-navigation-icon" class="navigation__use"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="navigation__item navigation__item--active">
+        <a href="#" class="navigation__link">
+          <svg class="navigation__icon">
+            <use xlink:href="./img/sprite/symbol/sprite.svg#user-icon" class="navigation__use"></use>
+          </svg>
+          <span class="navigation__txt">Customers</span>
+          <svg class="navigation__chevron">
+            <use xlink:href="./img/sprite/symbol/sprite.svg#chevron-navigation-icon" class="navigation__use"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="navigation__item">
+        <a href="#" class="navigation__link">
+          <svg class="navigation__icon">
+            <use xlink:href="./img/sprite/symbol/sprite.svg#wallet-icon" class="navigation__use"></use>
+          </svg>
+          <span class="navigation__txt">Income</span>
+          <svg class="navigation__chevron">
+            <use xlink:href="./img/sprite/symbol/sprite.svg#chevron-navigation-icon" class="navigation__use"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="navigation__item">
+        <a href="#" class="navigation__link">
+          <svg class="navigation__icon">
+            <use xlink:href="./img/sprite/symbol/sprite.svg#discount-icon" class="navigation__use"></use>
+          </svg>
+          <span class="navigation__txt">Promote</span>
+          <svg class="navigation__chevron">
+            <use xlink:href="./img/sprite/symbol/sprite.svg#chevron-navigation-icon" class="navigation__use"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="navigation__item">
+        <a href="#" class="navigation__link">
+          <svg class="navigation__icon">
+            <use xlink:href="./img/sprite/symbol/sprite.svg#help-icon" class="navigation__use"></use>
+          </svg>
+          <span class="navigation__txt">Help</span>
+          <svg class="navigation__chevron">
+            <use xlink:href="./img/sprite/symbol/sprite.svg#chevron-navigation-icon" class="navigation__use"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <div class="side-bar__user user">
+    <a href="#" class="user__link">
+      <img src="./img/user-avatar.jpg" alt="User avatar." width="42" height="42" class="user__avatar">
+      <p class="user__text">
+        <span class="user__name">Evano</span>
+        <span class="user__position">Project manager</span>
+      </p>
+    </a>
+  </div>
+</header>
+
+  <section class="main-block">
+  <h1 class="main-block__title visually-hidden"> CRm CUSTOMERS PAGE</h1>
+  <p class="main-block__slogan">Hello Evano 👋🏼,</p>
+  <div class="main-block__wrapper">
+    <div class="main-block__heading">
+      <h2 class="main-block__sub-title">All Customers</h2>
+      <span class="main-block__members-status">Active Members</span>
+      <form class="main-block__search search">
+        <label class="search__label">
+          <input placeholder="Search" type="search" class="search__input">
+        </label>
+        <button type="submit" class="search__submit">
+          <svg class="search__icon">
+            <use xlink:href="./img/sprite/symbol/sprite.svg#search-icon" class="search__use"></use>
+          </svg>
+        </button>
+      </form>
+    </div>
+    <div class="main-block__table-wrapper">
+    
+    </div>
+    <table class="main-block__table table">
+      <tbody class="table__body">
+      <tr class="table__row table__row--heading">
+        <th class="table__item table__item--heading table__item--name">
+          Customer Name
+        </th>
+        <th class="table__item table__item--heading table__item--company">
+          Company
+        </th>
+        <th class="table__item table__item--heading table__item--phone">
+          Phone Number
+        </th>
+        <th class="table__item table__item--heading table__item--email">
+          Email
+        </th>
+        <th class="table__item table__item--heading table__item--country">
+          Country
+        </th>
+        <th class="table__item table__item--heading table__item--status">
+          Status
+        </th>
+      </tr>
+      <tr class="table__row" id="tr_1">
+        <th class="table__item table__item--name">
+          <span class="table__label">Name</span>
+          <span class="table__content">Jane Cooper</span>
+        </th>
+        <th class="table__item table__item--company">
+          <span class="table__label">Company</span>
+          <span class="table__content">Microsoft</span>
+        </th>
+        <th class="table__item table__item--phone">
+          <span class="table__label">Ph. Num.</span>
+          <span class="table__content">
+            <a href="tel:(255) 555-0118" class="table__link">
+              (255) 555-0118
+            </a>
+         </span>
+        </th>
+        <th class="table__item table__item--email">
+          <span class="table__label">Email</span>
+          <span class="table__content">
+          <a href="mailto:jane@microsoft.com" class="table__link">
+            jane@microsoft.com
+          </a>
+        </span>
+        </th>
+        <th class="table__item table__item--country">
+          <span class="table__label">Country</span>
+          <span class="table__content">
+           United States
+        </span>
+        </th>
+        <th class="table__item table__item--status">
+          <span class="table__label">Status</span>
+          <span class="table__status status status--active">
+          active
+        </span>
+        </th>
+      </tr>
+      <tr class="table__row" id="tr_2">
+        <th class="table__item table__item--name">
+          <span class="table__label">Name</span>
+          <span class="table__content">Jane Cooper</span>
+        </th>
+        <th class="table__item table__item--company">
+          <span class="table__label">Company</span>
+          <span class="table__content">Microsoft</span>
+        </th>
+        <th class="table__item table__item--phone">
+          <span class="table__label">Ph. Num.</span>
+          <span class="table__content">
+            <a href="tel:(255) 555-0118" class="table__link">
+              (255) 555-0118
+            </a>
+         </span>
+        </th>
+        <th class="table__item table__item--email">
+          <span class="table__label">Email</span>
+          <span class="table__content">
+          <a href="mailto:jane@microsoft.com" class="table__link">
+            jane@microsoft.com
+          </a>
+        </span>
+        </th>
+        <th class="table__item table__item--country">
+          <span class="table__label">Country</span>
+          <span class="table__content">
+           United States
+        </span>
+        </th>
+        <th class="table__item table__item--status">
+          <span class="table__label">Status</span>
+          <span class="table__status status status--inactive">
+          inactive
+        </span>
+        </th>
+      </tr>
+      <tr class="table__row" id="tr_3">
+        <th class="table__item table__item--name">
+          <span class="table__label">Name</span>
+          <span class="table__content">Jane Cooper</span>
+        </th>
+        <th class="table__item table__item--company">
+          <span class="table__label">Company</span>
+          <span class="table__content">Microsoft</span>
+        </th>
+        <th class="table__item table__item--phone">
+          <span class="table__label">Ph. Num.</span>
+          <span class="table__content">
+            <a href="tel:(255) 555-0118" class="table__link">
+              (255) 555-0118
+            </a>
+         </span>
+        </th>
+        <th class="table__item table__item--email">
+          <span class="table__label">Email</span>
+          <span class="table__content">
+          <a href="mailto:jane@microsoft.com" class="table__link">
+            jane@microsoft.com
+          </a>
+        </span>
+        </th>
+        <th class="table__item table__item--country">
+          <span class="table__label">Country</span>
+          <span class="table__content">
+           United States
+        </span>
+        </th>
+        <th class="table__item table__item--status">
+          <span class="table__label">Status</span>
+          <span class="table__status status status--inactive">
+          inactive
+        </span>
+        </th>
+      </tr>
+      <tr class="table__row" id="tr_4">
+        <th class="table__item table__item--name">
+          <span class="table__label">Name</span>
+          <span class="table__content">Jane Cooper</span>
+        </th>
+        <th class="table__item table__item--company">
+          <span class="table__label">Company</span>
+          <span class="table__content">Microsoft</span>
+        </th>
+        <th class="table__item table__item--phone">
+          <span class="table__label">Ph. Num.</span>
+          <span class="table__content">
+            <a href="tel:(255) 555-0118" class="table__link">
+              (255) 555-0118
+            </a>
+         </span>
+        </th>
+        <th class="table__item table__item--email">
+          <span class="table__label">Email</span>
+          <span class="table__content">
+          <a href="mailto:jane@microsoft.com" class="table__link">
+            jane@microsoft.com
+          </a>
+        </span>
+        </th>
+        <th class="table__item table__item--country">
+          <span class="table__label">Country</span>
+          <span class="table__content">
+           United States
+        </span>
+        </th>
+        <th class="table__item table__item--status">
+          <span class="table__label">Status</span>
+          <span class="table__status status status--active">
+          active
+        </span>
+        </th>
+      </tr>
+      <tr class="table__row" id="tr_5">
+        <th class="table__item table__item--name">
+          <span class="table__label">Name</span>
+          <span class="table__content">Jane Cooper</span>
+        </th>
+        <th class="table__item table__item--company">
+          <span class="table__label">Company</span>
+          <span class="table__content">Microsoft</span>
+        </th>
+        <th class="table__item table__item--phone">
+          <span class="table__label">Ph. Num.</span>
+          <span class="table__content">
+            <a href="tel:(255) 555-0118" class="table__link">
+              (255) 555-0118
+            </a>
+         </span>
+        </th>
+        <th class="table__item table__item--email">
+          <span class="table__label">Email</span>
+          <span class="table__content">
+          <a href="mailto:jane@microsoft.com" class="table__link">
+            jane@microsoft.com
+          </a>
+        </span>
+        </th>
+        <th class="table__item table__item--country">
+          <span class="table__label">Country</span>
+          <span class="table__content">
+           United States
+        </span>
+        </th>
+        <th class="table__item table__item--status">
+          <span class="table__label">Status</span>
+          <span class="table__status status status--active">
+          active
+        </span>
+        </th>
+      </tr>
+      <tr class="table__row" id="tr_6">
+        <th class="table__item table__item--name">
+          <span class="table__label">Name</span>
+          <span class="table__content">Jane Cooper</span>
+        </th>
+        <th class="table__item table__item--company">
+          <span class="table__label">Company</span>
+          <span class="table__content">Microsoft</span>
+        </th>
+        <th class="table__item table__item--phone">
+          <span class="table__label">Ph. Num.</span>
+          <span class="table__content">
+            <a href="tel:(255) 555-0118" class="table__link">
+              (255) 555-0118
+            </a>
+         </span>
+        </th>
+        <th class="table__item table__item--email">
+          <span class="table__label">Email</span>
+          <span class="table__content">
+          <a href="mailto:jane@microsoft.com" class="table__link">
+            jane@microsoft.com
+          </a>
+        </span>
+        </th>
+        <th class="table__item table__item--country">
+          <span class="table__label">Country</span>
+          <span class="table__content">
+           United States
+        </span>
+        </th>
+        <th class="table__item table__item--status">
+          <span class="table__label">Status</span>
+          <span class="table__status status status--active">
+          active
+        </span>
+        </th>
+      </tr>
+      <tr class="table__row" id="tr_7">
+        <th class="table__item table__item--name">
+          <span class="table__label">Name</span>
+          <span class="table__content">Jane Cooper</span>
+        </th>
+        <th class="table__item table__item--company">
+          <span class="table__label">Company</span>
+          <span class="table__content">Microsoft</span>
+        </th>
+        <th class="table__item table__item--phone">
+          <span class="table__label">Ph. Num.</span>
+          <span class="table__content">
+            <a href="tel:(255) 555-0118" class="table__link">
+              (255) 555-0118
+            </a>
+         </span>
+        </th>
+        <th class="table__item table__item--email">
+          <span class="table__label">Email</span>
+          <span class="table__content">
+          <a href="mailto:jane@microsoft.com" class="table__link">
+            jane@microsoft.com
+          </a>
+        </span>
+        </th>
+        <th class="table__item table__item--country">
+          <span class="table__label">Country</span>
+          <span class="table__content">
+           United States
+        </span>
+        </th>
+        <th class="table__item table__item--status">
+          <span class="table__label">Status</span>
+          <span class="table__status status status--active">
+          active
+        </span>
+        </th>
+      </tr>
+      <tr class="table__row" id="tr_8">
+        <th class="table__item table__item--name">
+          <span class="table__label">Name</span>
+          <span class="table__content">Jane Cooper</span>
+        </th>
+        <th class="table__item table__item--company">
+          <span class="table__label">Company</span>
+          <span class="table__content">Microsoft</span>
+        </th>
+        <th class="table__item table__item--phone">
+          <span class="table__label">Ph. Num.</span>
+          <span class="table__content">
+            <a href="tel:(255) 555-0118" class="table__link">
+              (255) 555-0118
+            </a>
+         </span>
+        </th>
+        <th class="table__item table__item--email">
+          <span class="table__label">Email</span>
+          <span class="table__content">
+          <a href="mailto:jane@microsoft.com" class="table__link">
+            jane@microsoft.com
+          </a>
+        </span>
+        </th>
+        <th class="table__item table__item--country">
+          <span class="table__label">Country</span>
+          <span class="table__content">
+           United States
+        </span>
+        </th>
+        <th class="table__item table__item--status">
+          <span class="table__label">Status</span>
+          <span class="table__status status status--inactive">
+            inactive
+          </span>
+        </th>
+      </tr>
+      </tbody>
+    </table>
+    <footer class="main-block__footer footer">
+      <p class="footer__txt">
+        Showing data 1 to 8 of 256K entries
+      </p>
+      <ul class="footer__pagination pagination">
+        <li class="pagination__item pagination__item--prev">
+          <a href="#" class="pagination__link">
+            <
+          </a>
+        </li>
+        <li class="pagination__item pagination__item--active">
+          <a class="pagination__link">
+            1
+          </a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link">
+            2
+          </a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link">
+            3
+          </a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link">
+            4
+          </a>
+        </li>
+        <li class="pagination__item pagination__item--ellipsis">
+          <a class="pagination__link">
+            ...
+          </a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link">
+            40
+          </a>
+        </li>
+        <li class="pagination__item pagination__item--next">
+          <a href="#" class="pagination__link">
+            >
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </div>
+</section>
+
+</main>
+
+<script src="./js/index.bundle.js"></script>
+</body>
+</html>

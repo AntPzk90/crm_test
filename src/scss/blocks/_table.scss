@@ -1,0 +1,180 @@
+.table {
+  width: 100%;
+  margin-bottom: 28px;
+  display: block;
+
+  @media (max-width: $desktop-size) {
+    display: block;
+    overflow-x: auto;
+
+    scrollbar-width: thin; /* "auto" или "thin" */
+    scrollbar-color: var(--active-color) #EEEEEE; /* цвет бегунка и зоны отслеживания */
+
+    &::-webkit-scrollbar {
+      width: 12px; /* ширина всей полосы прокрутки */
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #EEEEEE; /* цвет зоны отслеживания */
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--active-color); /* цвет бегунка */
+      border-radius: 20px; /* округлось бегунка */
+      border: 3px solid #EEEEEE; /* отступ вокруг бегунка */
+    }
+  }
+
+  @media (max-width: $mobile-size) {
+    margin-bottom: 10px;
+    overflow-x: auto;
+  }
+
+  &__body {
+    display: block;
+    min-width: 890px;
+
+    @media (max-width: $mobile-size) {
+      min-width: 100%;
+      padding: 5px;
+    }
+  }
+
+  &__label {
+    display: none;
+    @media (max-width: $mobile-size) {
+      display: block;
+      color: #B5B7C0;
+      width: 80px;
+    }
+  }
+
+  &__content {
+    color: inherit;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__link {
+    color: inherit;
+  }
+
+  &__row {
+    display: flex;
+    width: 100%;
+    padding: 24px 0 23px 0;
+    border-bottom: 1px solid #EEEEEE;
+
+    @media (max-width: $mobile-size) {
+      flex-direction: column;
+      border-radius: 12px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 25);
+      margin-bottom: 20px;
+      padding: 0;
+    }
+
+    &--heading {
+      position: relative;
+      padding: 14px 0;
+      border-bottom: none;
+
+      @media (max-width: $mobile-size) {
+        display: none;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: -38px;
+        display: block;
+        width: calc(100% + (38px * 2));
+        height: 1px;
+        background-color: #EEEEEE;
+
+        @media (max-width: $desktop-size) {
+          width: 100%;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  &__item {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    height: 21px;
+    letter-spacing: -0.01em;
+    text-align: left;
+    flex-grow: 1;
+    color: var(--text-color);
+    padding-right: 10px;
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    &--heading {
+      color: #B5B7C0;
+
+      &.table__item--status {
+        padding-right: 9px;
+      }
+    }
+
+    &--name {
+      min-width: 162px;
+      max-width: 19.25%;
+    }
+
+    &--company {
+      min-width: 121px;
+      max-width: 14.8%;
+    }
+
+    &--phone {
+      min-width: 146px;
+      max-width: 17.5%;
+    }
+
+    &--email {
+      min-width: 197px;
+      max-width: 23.3%;
+    }
+
+    &--country {
+      min-width: 138px;
+      max-width: 15.7%;
+    }
+
+    &--status {
+      width: 79px;
+
+      flex-grow: 0;
+      text-align: center;
+      
+      @media (max-width: $mobile-size) {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: $mobile-size) {
+      min-width: 100%;
+      max-width: 100%;
+      display: flex;
+      justify-content: space-between;
+      height: auto;
+      min-height: 21px;
+      padding: 10px;
+      border-bottom: 1px solid #EEEEEE;
+
+      &:last-child {
+        padding-right: 10px;
+        margin-bottom: 0;
+        border: none;
+      }
+    }
+  }
+}

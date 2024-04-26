@@ -1,0 +1,51 @@
+.pagination {
+  display: flex;
+
+  &__item {
+    border-radius: 4px;
+    width: 24px;
+    background-color: #F5F5F5;
+    border: 1px solid #EEEEEE;
+    margin: 0 6px;
+    color: #404B52;
+
+    // TODO remove this code in development
+    @media (max-width: $mobile-size) {
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5) {
+        display: none;
+      }
+    }
+
+    &--active {
+      background-color: var(--active-color);
+      border-color: var(--active-color);
+      color: #ffffff;
+    }
+
+    &--ellipsis {
+      background-color: transparent;
+      border-color: transparent;
+      width: 14px;
+    }
+
+    &--prev {
+      margin-left: 0;
+      margin-right: 8px;
+    }
+
+    &--next {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    display: block;
+    font-size: 12px;
+    line-height: 12px;
+    color: inherit;
+    padding: 5px 3px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,82 @@
+.side-bar {
+  position: fixed;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  grid-area: side-bar;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 25);
+  box-sizing: border-box;
+  padding: 36px 28px;
+  height: 100%;
+  width: 306px;
+  transition: all ease 0.3s;
+
+  @media (max-width: $desktop-size) {
+    position: fixed;
+    flex-direction: column;
+    width: 306px;
+    height: 100vh;
+    left: 0;
+    top: 0;
+  }
+
+  &--hide {
+    transform: translateX(calc(-306px + 78px));
+    padding: 36px 10px;
+
+    & .side-bar__navigation {
+      width: 58px;
+      margin-left: auto;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 53px;
+
+    @media (max-width: $desktop-size) {
+      margin-bottom: 33px;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    width: 195px;
+    height: 39px;
+  }
+
+  &__icon {
+    width: 195px;
+    height: 39px;
+  }
+
+  &__version {
+    font-weight: 500;
+    font-size: 10px;
+    color: #838383;
+    margin-bottom: 5px;
+    margin-left: 5px;
+  }
+
+  &__btn {
+    align-self: center;
+    display: none;
+
+    @media (max-width: $desktop-size) {
+      display: block;
+      position: absolute;
+      top: 41px;
+      right: 24px;
+    }
+  }
+
+  &__navigation {
+    margin-bottom: auto;
+  }
+
+  &__user {
+    margin-bottom: 40px;
+  }
+}
